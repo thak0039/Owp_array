@@ -9,9 +9,9 @@
 
 
 
-let sub1 = prompt("Enter Javascript Marks", "Javascript marks");
-let sub2 = prompt("Enter C# Marks", "C# marks");
-let sub3 = prompt("Enter Phython Marks", "python");
+let sub1 = prompt("Enter Javascript Marks");
+let sub2 = prompt("Enter C# Marks");
+let sub3 = prompt("Enter Phython Marks");
 
 document.getElementById('jms').innerHTML = sub1;
 document.getElementById('cms').innerHTML = sub2;
