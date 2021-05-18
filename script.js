@@ -7,12 +7,23 @@
 // }
 // document.write(text);
 
+let numsubject = prompt("Number of subject");
+let text = "<table><tr><th>Subject Name</th><th>Subject Marks</th></tr>";
+let marks;
+let val;
+text += "<tr>"
+for (let i = 0; i < numsubject; i++) {
+
+    val = prompt("Enter Subject");
+    text += "<td>" + val + "</td>";
 
 
-let sub1 = prompt("Enter Javascript Marks");
-let sub2 = prompt("Enter C# Marks");
-let sub3 = prompt("Enter Phython Marks");
+}
+for (let i = 0; i < val; i++) {
+    marks = prompt("Enter Marks" + " " + val[i]);
+    text += "<td>" + marks + "</td>";
+}
 
-document.getElementById('jms').innerHTML = sub1;
-document.getElementById('cms').innerHTML = sub2;
-document.getElementById('pms').innerHTML = sub3;
+text += "</tr></table>";
+
+document.write(text);
