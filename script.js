@@ -8,22 +8,25 @@
 // document.write(text);
 
 let numsubject = prompt("Number of subject");
+var marks = [];
+var val = [];
 let text = "<table><tr><th>Subject Name</th><th>Subject Marks</th></tr>";
-let marks;
-let val;
-text += "<tr>"
 for (let i = 0; i < numsubject; i++) {
-
-    val = prompt("Enter Subject");
-    text += "<td>" + val + "</td>";
-
-
+    subvalue = prompt("Enter Subject");
+    val.push(subvalue);
+    // text = "<tr><td>" + val + "</td></tr>";
 }
-for (let i = 0; i < val; i++) {
-    marks = prompt("Enter Marks" + " " + val[i]);
-    text += "<td>" + marks + "</td>";
+console.log(val);
+for (let i = 0; i < val.length; i++) {
+    submarks = prompt("Enter Marks" + " " + val[i]);
+    marks.push(submarks);
+    // text += "<td>" + marks + "</td>";
+}
+for (i = 0, j = 0; i < val.length, j < marks.length; i++, j++) {
+    text += "<tr><td>" + val[i] + "</td>" + "<td>" + marks[j] + "</td></tr>";
 }
 
-text += "</tr></table>";
+
+text += "</table>";
 
 document.write(text);
