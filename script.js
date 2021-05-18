@@ -10,6 +10,8 @@
 let numsubject = prompt("Number of subject");
 var marks = [];
 var val = [];
+let total = 0;
+
 let text = "<table><tr><th>Subject Name</th><th>Subject Marks</th></tr>";
 for (let i = 0; i < numsubject; i++) {
     subvalue = prompt("Enter Subject");
@@ -19,13 +21,15 @@ for (let i = 0; i < numsubject; i++) {
 console.log(val);
 for (let i = 0; i < val.length; i++) {
     submarks = prompt("Enter Marks" + " " + val[i]);
+    total += parseInt(submarks);
     marks.push(submarks);
     // text += "<td>" + marks + "</td>";
 }
 for (i = 0, j = 0; i < val.length, j < marks.length; i++, j++) {
     text += "<tr><td>" + val[i] + "</td>" + "<td>" + marks[j] + "</td></tr>";
 }
-
+text += "<tr><td>Total</td><td>" + total + "</td></tr>";
+text += "<tr><td>Persontage</td><td>" + total / marks.length + "</td></tr>";
 
 text += "</table>";
 
