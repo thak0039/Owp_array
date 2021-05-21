@@ -28,8 +28,22 @@ for (let i = 0; i < val.length; i++) {
 for (i = 0, j = 0; i < val.length, j < marks.length; i++, j++) {
     text += "<tr><td>" + val[i] + "</td>" + "<td>" + marks[j] + "</td></tr>";
 }
-text += "<tr><td>Total</td><td>" + total + "</td></tr>";
-text += "<tr><td>Persontage</td><td>" + total / marks.length + "</td></tr>";
+text += "<tr><td><b>Total</b></td><td>" + total + "</td></tr>";
+let per = total / marks.length;
+text += "<tr><td><b>Persontage</b></td><td>" + per + "</td></tr>";
+text += "<tr><td><b>Class</b></td>";
+
+if (per >= 35 && per < 60) {
+    text += "<td> 3 class</tr>";
+} else if (per >= 60 && per < 80) {
+    text += "<td>2 class</td></tr>";
+} else if (per >= 80 && per <= 100) {
+    text += "<td>1 class </td></tr>";
+} else {
+
+    text += "<td> you are fail</td></tr>";
+}
+
 
 text += "</table>";
 
